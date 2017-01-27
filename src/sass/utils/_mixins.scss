@@ -1,0 +1,40 @@
+////
+/// First Quality utilities.
+/// @group Utilities
+/// @author First Quality
+////
+
+/// Mixin to size elements.
+/// @param {Number} $width           - Width
+/// @param {Number} $height [$width] - Height
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+/// Mixin to center elements.
+/// @param {Boolean} $horizontal
+/// @param {Boolean} $vertical
+@mixin centerelement($horizontal: true, $vertical: true) {
+    position: absolute;
+    @if ($horizontal and $vertical) {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    } @else if ($horizontal) {
+        left: 50%;
+        transform: translate(-50%, 0);
+    } @else if ($vertical) {
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+}
+
+@keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
