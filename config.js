@@ -55,7 +55,7 @@ module.exports = {
 
 	images: {
 		src: './src/images/**/*',
-		dest: './build/images'
+		dest: './build/images/'
 	},
 
 	postCSS: {
@@ -92,7 +92,7 @@ module.exports = {
 			'clean'
 		],
 		concurrent: [
-			// 'images',
+			'images',
 			'iconfont',
 			'copy',
 			'sprites',

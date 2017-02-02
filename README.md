@@ -1,3 +1,5 @@
+
+
 ## Getting Started
 
 - Install dependencies: `npm install`
@@ -5,6 +7,7 @@
 ## Setting up Deployments
 
 - Setup remotes for deployment servers: `npm run setup`
+(For this you will need to be authorized for my development server)
 
 ## Commands
 

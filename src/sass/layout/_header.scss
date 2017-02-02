@@ -1,0 +1,37 @@
+.header {
+    @include clearfix;
+    position: relative;
+    height: 50px;
+    background: rgba(000, 000, 000, .6);
+
+    .vox-logo {
+        position: relative;
+        height: 100%;
+
+        a {
+            display: block;
+            width: 100%;
+            height: 100%;
+
+            img {
+                @include centerelement(false, true);
+                display: block;
+                width: 100%;
+                max-width: 100px;
+            }
+        }
+    }
+
+    .nav-toggle {
+        display: inline-block;
+        padding: .5em;
+    }
+
+    .burger-icon {
+        @include burger(25px, 3px, 5px, color('primary', 'yellow'));
+    }
+
+    .nav-toggle.is-active .burger-icon {
+        @include burger-to-cross;
+    }
+}
