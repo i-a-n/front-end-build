@@ -1,7 +1,7 @@
 import domready from 'domready';
 import ElementExists from '../lib/element-exists';
 
-class FqComponent {
+class Component {
     constructor( ...options ) {
         Object.assign( this, ...options );
         domready( this.test.call( this ) );
@@ -13,4 +13,4 @@ class FqComponent {
     }
 }
 
-export default FqComponent;
+export default Component;
