@@ -1,7 +1,7 @@
 {
-  "name": "bandujo",
+  "name": "Front-End-Boilerplate",
   "version": "2.0.2",
-  "description": "Bandujo Challenge",
+  "description": "Yet Another Boilerplate you'll have to modify the heck out of",
   "author": "Chris W. Burke",
   "engines": {
     "node": "6.7.0",
