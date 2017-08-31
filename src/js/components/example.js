@@ -1,13 +1,20 @@
-import $ from 'jquery';
-import Component from '../lib/component';
+import Component from '../lib/component'
 
 const Example = new Component( {
     el: '.example',
-    init() {
-        this.bindEvents();
-        $(this.el).css('color', 'red');
+    events: {
+      'click .btn': 'somefunk',
+      'click .btntwo': 'morefunk'
     },
-    bindEvents() {}
+    init() {
+      console.log('component init')
+    },
+    somefunk(){
+      console.log('some funk')
+    },
+    morefunk(){
+      console.log('a little more funk')
+    }
 } );
 
-export default Example;
+export default Example
