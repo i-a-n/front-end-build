@@ -1,5 +1,4 @@
 import domready from 'domready';
-import $ from 'jquery';
 
 const App = {
 

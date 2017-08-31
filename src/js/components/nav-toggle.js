@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import Component from '../lib/component';
 
 const NavToggle = new Component( {
@@ -9,11 +8,9 @@ const NavToggle = new Component( {
     },
 
     bindEvents() {
-		$(this.el).on('click', this.toggleNav);
 	},
 
 	toggleNav() {
-		$(this).toggleClass('is-active');
 	}
 } );
 
