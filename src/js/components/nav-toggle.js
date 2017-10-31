@@ -1,17 +1,19 @@
-import Component from '../lib/component';
+import {Component, domready, $dom, request, PubSub} from '../lib/component'
 
-const NavToggle = new Component( {
-    el: '#nav-toggle',
-    init() {
-        this.bindEvents();
-
-    },
-
-    bindEvents() {
+const NavToggle = new Component({
+	el: '#nav-toggle',
+	name: 'Navigation Toggle',
+  events: {
+    'click .btn': 'toggleNav'
+  },
+  subscriptions: {},
+	init() {
+		this.debug('log', '')
 	},
 
 	toggleNav() {
-	}
-} );
+    PubSub.publish('locationUpdate', 'hello world!')
+  }
+});
 
-export default NavToggle;
+export default NavToggle
