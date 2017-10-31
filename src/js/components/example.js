@@ -1,4 +1,4 @@
-import Component from '../lib/component'
+import {Component, domready, $dom, request, PubSub } from '../lib/component'
 
 const Example = new Component( {
     el: '.example',
@@ -7,17 +7,25 @@ const Example = new Component( {
       'click .btn': 'somefunk',
       'click .btntwo': 'morefunk'
     },
+    subscriptions: {
+      'locationUpdate': 'subhandler'
+    },
     init() {
-      console.log(this.attrs)
-      c
+      this.debug('error', this.attrs)
     },
-    somefunk(e){
-      console.log(this)
-      console.log(e)
-      console.log('some funk')
+    somefunk(event){
+      this.debug('warn', this.attrs)
+      this.debug('info', this)
+      this.debug('info', event)
+      this.debug('info', 'some funk')
+
     },
-    morefunk(){
-      console.log('a little more funk')
+    morefunk(event){
+      this.debug('info', this.attrs)
+      this.debug('info', 'a little more funk')
+    },
+    subhandler(data, msg){
+      this.debug('info', this)
     }
 } );
 
