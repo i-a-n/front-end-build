@@ -24,7 +24,7 @@ const Example = new Component( {
       this.debug('info', 'a little more funk')
     },
     subhandler(data, msg){
-      this.debug('info', this)
+      this.debug('info', {data, msg})
     }
 } );
 
