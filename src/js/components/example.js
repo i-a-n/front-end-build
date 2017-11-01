@@ -1,4 +1,4 @@
-import {Component, domready, $dom, request, PubSub } from '../lib/component'
+import {Component, domready, $dom, request, PubSub, utility } from '../lib/component'
 
 const Example = new Component( {
     el: '.example',
@@ -18,7 +18,6 @@ const Example = new Component( {
       this.debug('info', this)
       this.debug('info', event)
       this.debug('info', 'some funk')
-
     },
     morefunk(event){
       this.debug('info', this.attrs)

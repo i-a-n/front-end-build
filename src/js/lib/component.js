@@ -4,6 +4,7 @@ import attributes from 'data-attributes'
 import $dom from 'dom-helpers'
 import request from 'superagent'
 import PubSub from 'pubsub-js'
+import utility from '../lib/utility'
 
 class Component {
     constructor( ...options ) {
@@ -54,4 +55,4 @@ class Component {
 }
 
 
-export { Component, domready, $dom, request, PubSub }
+export { Component, domready, $dom, request, PubSub, utility }
