@@ -1,4 +1,4 @@
-import {Component, domready, $dom, request, PubSub, utility } from '../lib/component'
+import { Component, domLoaded, $dom, request, PubSub, utility } from '../lib/component'
 
 const Example = new Component( {
     el: '.example',
@@ -11,21 +11,20 @@ const Example = new Component( {
       'locationUpdate': 'subhandler'
     },
     init() {
-      this.debug('error', this.attrs)
+      console.log('example init')
+    },
+    keyHandler(e) {
+      console.log(e);
     },
     somefunk(event){
-      this.debug('warn', this.attrs)
-      this.debug('info', this)
-      this.debug('info', event)
-      this.debug('info', 'some funk')
+      this.debug('warn', this.attrs())
     },
     morefunk(event){
-      this.debug('info', this.attrs)
-      this.debug('info', 'a little more funk')
+      this.debug('info', this.attrs())
     },
     subhandler(data, msg){
       this.debug('info', {data, msg})
     }
-} );
+} )
 
 export default Example
