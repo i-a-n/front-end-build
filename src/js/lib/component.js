@@ -5,7 +5,7 @@ import request from 'superagent'
 import PubSub from 'pubsub-js'
 import utility from './utility'
 
-class bmwComponent {
+class awesomeComponent {
     constructor(node, ...options ) {
       Object.assign( this, ...options )
       domLoaded.then(() => {
@@ -65,7 +65,7 @@ const Component = function(...props){
   const options = props[0]
   const nodes = document.querySelectorAll( options.el )
   nodes.forEach(node => {
-    new bmwComponent(node, options)
+    new awesomeComponent(node, options)
   })
 }
 
